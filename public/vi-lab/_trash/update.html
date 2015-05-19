@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<title>videos | SCM2</title>
+<meta name='robots' content='noindex,nofollow' /> 
+
+
+<script type='text/javascript' src='js/jquery-1.5.2.js'></script>
+<script type='text/javascript' src='js/vi-two-deps.js'></script>
+
+<script type="text/javascript"> 
+	
+	jQuery(document).ready(function(e) { alert('drin')
+		var v = [
+		{
+				"id": "102",
+				"metadata": [
+				  {
+				    "author": "Prof. Dr. Peter Greistorfer",
+				    "institution": "Universität Graz",
+				    "title": "Layout Decisions Teil 2",
+				    "category": "N",
+				    "abstract": "",
+				    "length": "60:15:00",
+				    "date": "2013/12/04",
+				    "weight": 0,
+				    "source": "http://gams.uni-graz.at/fedora/get/o:pug-lv-11s-prodlog-12-layoutdecisions02/STREAM"
+				  }
+				],
+				"progress": "",
+				"video": "http://141.46.8.101/beta/scm-lab2/videos/scm_layout_decisions2.webm",
+				"thumbnail": "img/video-icons/scm_layout_decisions2.png",
+				"tags": [],
+				"comments": [],
+				"assessment": [],
+				"toc": [],
+				"links": []
+			},
+			{
+				"id": "107",
+				"metadata": [
+				  {
+				    "author": "Prof. G. Srinivasan",
+				    "institution": "IIT Madras",
+				    "title": "Chinese Postman Problem",
+				    "category": "Z",
+				    "abstract": "",
+				    "length": "58:22:00",
+				    "date": "2013/12/04",
+				    "weight": 0,
+				    "source": ""
+				  }
+				],
+				"progress": "",
+				"video": "http://141.46.8.101/beta/scm-lab2/videos/scm_chinese_postman_problem.webm",
+				"thumbnail": "img/video-icons/scm_chinese_postman_problem.png",
+				"tags": [],
+				"comments": [],
+				"assessment": [],
+				"toc": [],
+				"links": []
+			},
+			{
+				"id": "110",
+				"metadata": [
+				  {
+				    "author": "Prof. Arun Kanda",
+				    "institution": "IIT Delhi",
+				    "title": "Product Layouts and Assambly Line Balancing",
+				    "category": "N",
+				    "abstract": "",
+				    "length": "60:00:00",
+				    "date": "2013/12/04",
+				    "weight": 0,
+				    "source": ""
+				  }
+				],
+				"progress": "",
+				"video": "http://141.46.8.101/beta/scm-lab2/videos/scm_product_layouts.webm",
+				"thumbnail": "img/video-icons/scm_product_layouts.png",
+				"tags": [],
+				"comments": [],
+				"assessment": [],
+				"toc": [],
+				"links": []
+			}
+		];
+
+		$.each(v, function(i, video){ alert(video.id)
+			$.post('/videos', {"data":video}, function(res){
+				alert('saved ');
+				alert(res);
+			})
+		});
+		
+	});  
+</script> 	
+
+</head>
+
+<body class="">
+	
+</body>
+</html>
+
+
+ 
+
+
+
+

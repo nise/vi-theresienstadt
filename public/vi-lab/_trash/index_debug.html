@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+<!--<![endif]-->
+<head>
+<title>SCM-LAB</title>
+<meta name='robots' content='noindex,nofollow' />
+
+
+
+<script type='text/javascript' src='js/jquery-1.5.2.js'></script>
+<script type='text/javascript' src='js/vi-two-deps.js'></script>
+<script type='text/javascript' src='js/vi-two.js'></script>
+
+<script type='text/javascript' src='js/vi-videolab.js'></script>
+<script type='text/javascript' src="/socket.io/socket.io.js"></script>
+
+<script type="text/javascript"> 
+
+	
+	var 
+		observer = {}, 
+		vi2 = {}, 
+		ocr = {}; 
+	jQuery(document).ready(function(e) {  
+		$.ajax({
+  			url:'/logedin',
+  			crossDomain:false,
+  			port:3000,
+  			type:'json',
+  			method:'GET',
+  			error:function(e){ alert(JSON.stringify(e) ); },
+  			success : function(da){ alert(JSON.stringify(da) ); }
+  		}); // some bug here?
+	
+		vi2 = new ViLab("http://localhost:3000", "SCM2"); 
+	}); 
+</script> 	
+
+</head>
+
+<body class="">
+	<div style="display:none; visibility:hidden;" id="vi2"></div>
+	<div class="page-head">
+		<h1>SCM-LAB</h1>
+		<div class="instructions"></div>
+		<div class="messages">
+			<div class="toggler"></div>
+		</div>
+		<div class="account-data"></div>
+	</div>
+	<div id="page">	
+		<div id="main">
+			<div id="dialog" title="Dialog Title"></div>		
+			<div class="header">
+				<h2 class="meta-title"></h2>
+				<div class="meta-desc"></div>
+			</div>
+			<div id="container">
+				<div id="meta">
+					<div id="screen"></div>
+					<div id="accordion"></div>	
+				</div>
+				<div id="seq"></div>
+				<div id="overlay"></div>
+			</div>
+			<div class="sitepanel-right"></div>
+		</div>
+	</div>
+	<div class="page-footer">
+		<div class="col">Zur Verbesserung der Lernumgebung können meine Nutzungsdaten im Rahmen der Begleitstudie erhoben werden: <input type="checkbox" id="tracing" /></div>
+	</div>
+</body>
+</html>

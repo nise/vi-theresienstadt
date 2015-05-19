@@ -1,0 +1,109 @@
+<% layout( 'layout' ) -%>
+
+<script>
+	
+	var 
+			observer = undefined, 
+			vi2 = undefined, 
+			ocr = undefined;  
+		
+	$( document ).ready(function() {
+		vi2 = new ViLab(server, "<%= items[0]._id %>"); 
+	});			
+
+</script> 	
+
+
+
+ <!-- Subhead
+    ================================================== -->
+    <header class="bs-header" id="overview" style="">
+        <div hidden  class="container">
+            <h1><%= items[0].metadata[0].title %></h1>
+            <p hidden class="lead"><%= items[0].metadata[0].title %></p>
+        </div>
+    </header>
+
+ <!-- Content
+    ================================================== -->
+    
+ <!--<div align="center" class="embed-responsive" style="width:90%;">
+    <video autoplay loop class="embed-responsive-item" style="width:90%;">
+        <source src="/vi-lab/videos/theresienstadt.webm?foo=1430689911665" type="video/webm">
+    </video>
+</div>-->
+
+<div class="main">   
+	<div id="seq"></div>
+	<div id="overlay"></div>
+	<div id="split"></div>
+	<div id="accordion-resizer" class="ui-widget-content">
+		<div id="accordion"></div>
+	</div>
+</div>
+
+<div id="video-controls" class="video-controls">
+	<div class="timelines vi2-btn">
+		<div class="vi2-video-seeklink vi2-btn"></div>
+		<div class="vi2-video-seek vi2-btn"></div>
+		<div class="vi2-video-progress vi2-btn"></div>
+	</div>
+	<div class="control-bar">
+		<div class="vi2-skip-back vi2-btn" title="Skip Back">skip back</div>
+		<div class="vi2-video-play vi2-btn" title="Play/Pause"></div>
+		<div class="vi2-video-timer"></div>
+		<div class="vi2-btn-box"></div>
+		<div class="vi2-volume-box">
+			<div class="vi2-volume-slider2"></div>
+			<a class="vi2-volume-button vi2-btn" title="Mute/Unmute"></a>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div style="display:none; visibility:hidden;" id="vi2"></div>
+<div id="dialog3"></div>
+
+
+<!--<div class="container">
+	<div id="main">
+		<div id="dialog" title="Dialog Title" hidden></div>		
+		<div id="video-container2">
+			<div id="meta" style=""  >
+				<div id="screen"></div>
+					
+			</div>
+			
+			<div id="overlay"></div>
+		</div>
+	</div>		
+</div>
+->
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+
+
+
+
+	
+

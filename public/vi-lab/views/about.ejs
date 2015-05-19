@@ -1,0 +1,52 @@
+
+<script type="text/javascript"> 
+
+// render markdown
+		$('.mark').each(function(i, val){
+				$(val).html(markdown.toHTML($(val).text()))
+		});
+
+</script>
+
+
+<div class="jumbotron">
+	<div class="container">
+  <h2>About</h2>
+  <p></p>
+  </div>
+</div> 
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-8 mark">
+
+### Beteiligte
+**Niels Seidel**, TU Dresden, Internationales Hochschulinstitut Zittau, Professur für Produktionswirtschaft und Informationstechnologie
+
+
+
+### Software-Entwicklung
+Vi-Lab	
+
+
+</div>	
+		<div class="col-md-4 side-panel affix-top" data-spy="affix">
+			<h3 class=""></h3>
+			<div class=""></div>
+		</div>
+	</div>	
+</div>	
+    
+    
+<script>
+$('.side-panel').affix({
+			offset: {
+				top: 200,
+				bottom:50
+			}
+		});
+		
+		$('.side-panel').on('affixed.bs.affix', function(){
+				$(this).removeAttr('style');
+		});
+</script>    
