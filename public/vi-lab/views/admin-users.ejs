@@ -1,4 +1,3 @@
-<% layout('admin-layout') -%>
 
 <script type="text/javascript"> 
 //
@@ -29,10 +28,10 @@ var show_bio = function(cl){
 </script>
 
 
+<div class="col-md-10">
 <h2>Users 
-<a class="button" href="/admin/users/new">add new</a></h2>
+<small><a class="button" href="/admin/users/new">add new</a></small></h2>
 
-<div id="mark"></div>
 <table class="xtable">
 <thead>
 	<th></th>
@@ -43,12 +42,11 @@ var show_bio = function(cl){
 	<th>groups</th>
 </thead>
 <tbody>
-
 	<% if (items.length) { %>
 	<% i=0 %>	
 		<% items.forEach(function(item){ i++ %>
 			<tr class="meta" num="e<%= i %>">
-				<td><img width="10" src="/vi-lab/img/user-icons/user-<%= item.id %>.png" /></td> 
+				<td><img width="15" src="/vi-lab/img/user-icons/user-<%= item.id %>.png" /></td> 
 				<td><a href="/admin/users/edit/<%=: item.username %>" title=""><%= item.username %></a></td>
 				<td><%=: item.name %></td>
 				<td><%= item.firstname %></td>
@@ -59,5 +57,7 @@ var show_bio = function(cl){
  	<% } %>
       
   </tbody>
-</table> 
+</table>
+
+</div> 
     

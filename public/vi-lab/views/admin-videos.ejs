@@ -1,4 +1,4 @@
-<% layout('admin-layout') -%>
+
 
 <script type="text/javascript"> 
 //
@@ -19,11 +19,14 @@ jQuery(document).ready(function(e) {
 </script>
 
 
-<h2>Videos
-<a class="button" href="/admin/videos/new">add new</a></h2>
+<div class="col-md-10">
+<h2>Videos 
+<small><a class="button" href="/admin/videos/new">add new</a></small></h2>
+
 <table class="xtable">
 	<thead>
 		<th>Titel</th>
+		<th>Annotations</th>
 		<th>Modified</th>
 	</thead>
 	<tbody>
@@ -40,9 +43,20 @@ jQuery(document).ready(function(e) {
 				<a href="/videos/stats/<%= item._id %>">view stats</a> 
 			</span>
 		</td>
+		<td>
+			<% if ( item.links.length > 1) { %>hyperlinks (<%=item.links.length%>), <%}%>
+			<% if ( item.toc.length > 1) { %>chaptes (<%=item.toc.length%>), <%}%>
+			<% if ( item.tags.length > 1) { %>tags (<%=item.tags.length%>), <%}%> 
+			<% if ( item.highlight.length > 1) { %>highlight (<%=item.highlight.length%>), <%}%>
+			<% if ( item.slides.length > 1) { %>slides (<%=item.slides.length%>), <%}%>
+			<% if ( item.comments.length > 1) { %>comments (<%=item.comments.length%>), <%}%>
+			<% if ( item.assessmentfillin.length > 1) { %>fill-in tasks (<%=item.assessmentfillin.length%>), <%}%>
+			<% if ( item.assessmentwriting.length > 1) { %>on demand tasks (<%=item.assessmentwriting.length%>), <%}%>
+			
+		</td>
 		<td><%= item.updated_at %></td>
 		
-	</tr>
+	</tr>	
 <!--  
 <div class="scene-view">
 	<h3><a href="/videos/view/<%= item._id %>"><%= item.metadata[0].title %></a></h3>
@@ -75,5 +89,6 @@ jQuery(document).ready(function(e) {
 <% }); %>
 </tbody>
 </table>
+</div>
 
 
