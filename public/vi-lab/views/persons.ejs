@@ -28,7 +28,7 @@ var show_bio = function(name, bio, row){
 <div class="jumbotron">
 	<div class="container">
   <h2>Protagonisten</h2>
-  <p>--- Bemerkungen zur Auswahl an Protagonisten  ---</p>
+  <p>Die nachfolgend gelistet Personen wurden von als Protagonisten im Film identifiziert. Die biographischen Angaben konnten bisweilen nur teilweise ermittelt werden.</p>
   </div>
 </div> 
 
@@ -84,9 +84,14 @@ var show_bio = function(name, bio, row){
 			</tbody>
 			</table> 
 		</div>	
-		<div class="col-md-4 side-panel affix-top" data-spy="affix">
-			<h3 class="bio-name"></h3>
-			<div class="bio-text mark"></div>
+		<div hidden class="col-md-4 side-panel affix-top" data-spy="affix">
+			<ul id="scene-menu" class="nav nav-tabs nav-stacked"  data-spy="affix">
+				<% items.forEach( function ( item ){ %>
+				<% j++ %>
+				<li><a href="#scene-<%= j %>"><%= item.surename %>, <%= item.name %></a></li>
+				<% }); %>
+			</ul>
+			<a class="back-to-top" href="#top">Back to top</a>
 		</div>
 	</div>	
 </div>	
