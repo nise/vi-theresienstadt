@@ -3,7 +3,7 @@
 # Vi-Lab
 Vi-Lab is a video labratory for interacting and communication with videografic reources as well as other users.
 Currently it is work in progress because many administartion facilities need to be implemented.
-s
+
 
 # Example: Theresienstadt explained
 
