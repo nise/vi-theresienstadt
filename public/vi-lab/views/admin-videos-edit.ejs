@@ -1,7 +1,6 @@
 
-<div class="col-md-10">
-<% items.forEach( function( item ){ %>
-<% if( item._id == current ){ %>
+<div class="col-md-10"> 
+<% item = items[0] %>
 	<h2>
 		Edit Video:
 		<small><a href="/videos/<%= item._id %>"><%= item.metadata[0].title %></a></small>
@@ -35,13 +34,11 @@
       </div>
       <br><br>
       <div class="buttons">
-        <button class="btn btn-default" type="submit">update</button>  <a href="/admin/videos/">cancel</a> <a class="alert-btn" href="/videos/destroy/<%= item._id %>" title="Delete this item item">delete</a>
+        <button class="btn btn-default" type="submit">update</button>  <a href="javascript:render('admin-videos', '/json/videos', true, '.admin-panel');">cancel</a> <a class="alert-btn" href="/videos/destroy/<%= item._id %>" title="Delete this item item">delete</a>
       </div>
     </form>
-    <% }else{ %>
-      
-    <% } %>
+
   </div>
-<% }); %>
+
 </div>
 

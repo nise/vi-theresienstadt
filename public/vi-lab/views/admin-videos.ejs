@@ -37,10 +37,8 @@ jQuery(document).ready(function(e) {
 		<td class="table-menu">
 			<%= item.metadata[0].title %><br>
 			<span class="table-menu-entry">
-				<a href="/videos/view/<%= item._id %>">view</a> | 
-				<a href="javascript:render('admin-videos-edit','/admin/videos/metadata/edit/<%= item._id %>', false, '.admin-panel');">edit Metadata</a> | 
-				<a href="/admin/videos/annotations/edit/<%= item._id %>">edit annotations</a> |
-				<a href="/videos/stats/<%= item._id %>">view stats</a> 
+				<a href="/videos/view/<%= item._id %>">view video</a> | 
+				<a href="javascript:render('admin-videos-edit','/admin/videos/metadata/edit/<%= item._id %>', true, '.admin-panel');">edit metadata</a> 
 			</span>
 		</td>
 		<td>
@@ -52,9 +50,16 @@ jQuery(document).ready(function(e) {
 			<% if ( item.comments.length > 1) { %>comments (<%=item.comments.length%>), <%}%>
 			<% if ( item.assessmentfillin.length > 1) { %>fill-in tasks (<%=item.assessmentfillin.length%>), <%}%>
 			<% if ( item.assessmentwriting.length > 1) { %>on demand tasks (<%=item.assessmentwriting.length%>), <%}%>
-			
+			<br>
+			<span class="table-menu-entry">
+				<a href="/admin/videos/annotations/edit/<%= item._id %>">edit annotations</a>
+			</span>
 		</td>
-		<td><%= item.updated_at %></td>
+		<td><%= item.updated_at %><br>
+			<span class="table-menu-entry">
+				<a href="/videos/stats/<%= item._id %>">view stats</a> 
+			</span>
+		</td>
 		
 	</tr>	
 <!--  
