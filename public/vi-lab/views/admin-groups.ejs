@@ -1,8 +1,7 @@
 <div class="col-md-10">
 <h2>Groups</h2>
 	
-	
-	<table hidden class="xtable">
+	<table class="xtable">
 	<thead>
 		<th>ID</th>
 		<th>Description</th>
@@ -17,23 +16,23 @@
 		<td><%= item.description %></td>
 		<td><%= item.persons %></td>
 		<td><%= item.hs %></td>
-		<td><%= item.id %></td>
+		<td>
+			<% item.videos.forEach(function(video){  %>
+				<%= video %>,
+			<% }); %>	
+		</td>
 	</tr>
-	<% }%>
+	<% }); %>
 	</tbody>
-	</table>		 
+	</table>	
 
 </div>
 
 
 <script>
-
 $(document).ready (function () { 
 
 	
 
 });
-
-
-
 </script>	

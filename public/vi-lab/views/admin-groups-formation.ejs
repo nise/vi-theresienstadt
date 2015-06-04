@@ -24,7 +24,7 @@
 	</div>
 	
 	<div>
-	<input disabled <type="radio" name="form-algo" value="method5" aria-label="Distribute users in groups of n people by multiple (homogene or heterogene) crtieria.">
+	<input disabled type="radio" name="form-algo" value="method5" aria-label="Distribute users in groups of n people by multiple (homogene or heterogene) crtieria.">
 	<span>Distribute users in groups of n people by multiple (homogene or heterogene) crtieria.</span>
 	</div>
 	<!--
@@ -39,7 +39,7 @@
 	</div>
 	
 	<div>
-	<input type="checkbox" checked value="limit" aria-label="Consider n as an strict upper limit.">
+	<input disabled type="checkbox" checked value="limit" aria-label="Consider n as an strict upper limit.">
 	<span>Consider n as an strict upper limit.</span>
 	</div>		
 	
@@ -106,9 +106,9 @@ function getGroupFormation(method, n){
 		success: function(groups){
 			the_group_formation = groups; 
 			$.each(groups, function(i, group){
-				$('.formed-groups').append('## Group '+ (i+1) +' ('+ groups[i].length +')\n');
+				$('.formed-groups').append('\n\n **Group '+ (i+1) +'** ('+ groups[i].length +') \n');
 				 $.each(groups[i], function(j, user){
-				 	$('.formed-groups').append('* '+user.username+'\n');
+				 	$('.formed-groups').append('\n * '+user.username+'');
 				 });
 				//$('#tbody').append('<tr><td>'+group+'</td></tr>')
 			});
