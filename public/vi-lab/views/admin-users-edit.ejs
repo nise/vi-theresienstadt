@@ -1,0 +1,54 @@
+<div class="col-md-10">
+	<h2>
+		<img width="20" src="/vi-lab/img/user-icons/user-<%= item.id %>.png" /> 
+		Edit user: <a href="/users/<%= item._id %>"><%= item.username %></a>
+	</h2> 
+  <div class="edit-form">
+    <form action="/users/update/<%= item._id %>" method="post" accept-charset="utf-8">
+			<div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Username</span>
+				<input type="text" class="form-control" placeholder="username" aria-describedby="sizing-addon1" name="username" value="<%= item.username %>">
+      </div>
+      <br>
+      <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Name</span>
+				<input type="text" class="form-control" placeholder="name" aria-describedby="sizing-addon1" name="name" value="<%= item.name %>">
+      </div>
+      <br>
+       <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">First name</span>
+				<input type="text" class="form-control" placeholder="firstname" aria-describedby="sizing-addon1" name="firstname" value="<%= item.firstname %>">
+      </div>
+      <br>
+       <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Name</span>
+				<input type="text" class="form-control" placeholder="name" aria-describedby="sizing-addon1" name="name" value="<%= item.name %>">
+      </div>
+      <br>
+      
+      <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Role</span>
+				<input type="text" class="form-control" placeholder="role" aria-describedby="sizing-addon1" name="title" value="<%= item.role %>">
+      </div>
+      <br>
+      
+       <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Email</span>
+				<input type="text" class="form-control" placeholder="email" aria-describedby="sizing-addon1" name="email" value="<%= item.email %>">
+      </div>
+      <br>
+      
+      <div class="input-group input-group-xs">
+				<span class="input-group-addon" id="sizing-addon1">Password</span>
+				<input type="password" class="form-control" placeholder="password" aria-describedby="sizing-addon1" name="password" value="<%= item.password %>">
+      </div>
+      <br>
+			
+			
+			<div class="buttons">
+				<button type="submit" class="btn-default btn">update</button>  <a href="/admin/users/">cancel</a> <a class="alert-btn" href="/users/destroy/<%= item._id %>" title="Delete this item item">delete</a>
+			</div>
+    </form>
+	</div>
+</div>
+

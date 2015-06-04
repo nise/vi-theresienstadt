@@ -7,6 +7,11 @@
     padding-top: 48px;
 }
 
+.subnav{
+	font-size:12px;
+	padding-left:20px;
+}
+
 
 
 /* TABLES*/
@@ -40,6 +45,8 @@ font-weight:bold;
 .footer {
   clear: both;
   margin-top:100px;
+  position:absolute;
+  bottom:0;
 	display:block;
   width: 100%;
   /* Set the fixed height of the footer here */

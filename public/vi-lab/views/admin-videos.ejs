@@ -21,7 +21,7 @@ jQuery(document).ready(function(e) {
 
 <div class="col-md-10">
 <h2>Videos 
-<small><a class="button" href="/admin/videos/new">add new</a></small></h2>
+<small><a class="button" href="javascript:render('admin-videos-new','/admin/videos/new', false, '.admin-panel');">add new</a></small></h2>
 
 <table class="xtable">
 	<thead>
@@ -38,7 +38,7 @@ jQuery(document).ready(function(e) {
 			<%= item.metadata[0].title %><br>
 			<span class="table-menu-entry">
 				<a href="/videos/view/<%= item._id %>">view</a> | 
-				<a href="/admin/videos/metadata/edit/<%= item._id %>">edit Metadata</a> | 
+				<a href="javascript:render('admin-videos-edit','/admin/videos/metadata/edit/<%= item._id %>', false, '.admin-panel');">edit Metadata</a> | 
 				<a href="/admin/videos/annotations/edit/<%= item._id %>">edit annotations</a> |
 				<a href="/videos/stats/<%= item._id %>">view stats</a> 
 			</span>

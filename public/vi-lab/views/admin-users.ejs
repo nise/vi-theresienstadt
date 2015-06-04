@@ -30,7 +30,7 @@ var show_bio = function(cl){
 
 <div class="col-md-10">
 <h2>Users 
-<small><a class="button" href="/admin/users/new">add new</a></small></h2>
+<small><a class="button" href="javascript:render('admin-users-new','/admin/users/new', false, '.admin-panel');">add new</a></small></h2>
 
 <table class="xtable">
 <thead>
@@ -47,7 +47,7 @@ var show_bio = function(cl){
 		<% items.forEach(function(item){ i++ %>
 			<tr class="meta" num="e<%= i %>">
 				<td><img width="15" src="/vi-lab/img/user-icons/user-<%= item.id %>.png" /></td> 
-				<td><a href="/admin/users/edit/<%=: item.username %>" title=""><%= item.username %></a></td>
+				<td><a href="javascript:render('admin-users-edit','/admin/users/edit/<%=: item.username %>', false, '.admin-panel');" title=""><%= item.username %></a></td>
 				<td><%=: item.name %></td>
 				<td><%= item.firstname %></td>
 				<td><%=: item.role %></td>
