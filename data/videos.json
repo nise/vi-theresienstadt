@@ -1,0 +1,448 @@
+[
+{
+    "_id": "52a13d2e2aa9d35f24000777",
+    "video": "/vi-lab/videos/theresienstadt.webm",
+    "comments": [],
+    "id": "777",
+    "links": [],
+    "metadata": [
+      {
+        "author": "...",
+        "institution": "...",
+        "title": "Theresienstadt: Dokumentation aus dem Jüdischen Siedlungsgebiet",
+        "category": "Z",
+        "abstract": "",
+        "length": "25:22:00",
+        "date": "2014/04/11",
+        "weight": 0,
+        "source": "",
+        "thumbnail": "/vi-lab/img/placeholder.jpg",
+        "_id": "54547be3568b77107d437b5c",
+        "tags": [
+          {
+            "t": "Konflikt",
+            "t": "Diagnose",
+             "t": "Intervention"
+          }
+        ]
+      }
+    ],
+    "progress": "",
+    "highlight": [
+      {
+        "tagname": "Benjamin Murmelstein",
+        "occ": [
+          {
+          	"start": 237,
+          	"duration":5, 
+          	"x": 58,
+        		"y": 15
+        	}
+        ]
+      },
+      {
+        "tagname": "Emil Utitz",
+        "occ": [
+          {
+          	"start": 1143,
+          	"duration":10, 
+          	"x": 20,
+        		"y": 30
+        	}
+        ]
+      },
+      {
+        "tagname": "Rudolf Saudek",
+        "occ": [
+          {
+          	"start": 704.2, 
+          	"duration":25, 
+          	"x": 15,
+        		"y": 20
+        	}
+        ]
+      },
+      {
+        "tagname": "Hans Krasa",
+        "occ": [
+          {
+          	"start": 1191, 
+          	"duration":25, 
+          	"x": 20,
+        		"y": 20
+        	}
+        ]
+      },
+      {
+        "tagname": "Rabbiner Dr. Leo Baeck",
+        "occ": [
+          {
+          	"start": 1170, 
+          	"duration":25, 
+          	"x": 20,
+        		"y": 20
+        	}
+        ]
+      },
+      {
+        "tagname": "Elly von Bleichröder  ",
+        "occ": [
+          {
+          	"start": 1168, 
+          	"duration":25, 
+          	"x": 55,
+        		"y": 50
+        	}
+        ]
+      }
+    ],
+    "slides" : [
+    	{
+        "tagname": "Gärten der SS",
+        "path": "/vi-lab/img/places/ss-gaerten.png",
+        "occ": [
+          {
+          	"start": 1311,
+          	"duration":10, 
+          	"x": 50,
+        		"y": 50,
+        		"long":0,
+        		"lat":0,
+        		"caption":"Die angeblichen Gärten der Juden in den Gräben der Festung gehörten damals der SS. Heute werden die Gräben nicht mehr genutzt."
+        	}
+        ]
+      },
+      {
+        "tagname": "Vor der Dresdner Kasserne",
+        "path": "/vi-lab/img/places/vorDresdnerKasserne.png",
+        "occ": [
+          {
+          	"start": 916,
+          	"duration":10, 
+          	"x": 50,
+        		"y": 50,
+        		"long":0,
+        		"lat":0,
+        		"caption":""
+        	}
+        ]
+      },
+      {
+        "tagname": "Haus",
+        "path": "/vi-lab/img/places/haus.png",
+        "occ": [
+          {
+          	"start": 399,
+          	"duration":10, 
+          	"x": 50,
+        		"y": 50,
+        		"long":0,
+        		"lat":0,
+        		"caption":"Angebliches Heim für kranke Kinder. Heute befindet sich eine Pension im Haus."
+        	}
+        ]
+      },
+      {
+        "tagname": "Schild am Gericht",
+        "path": "/vi-lab/img/places/IMG_3446_Rathaus.JPG",
+        "occ": [
+          {
+          	"start": 340,
+          	"duration":10, 
+          	"x": 50,
+        		"y": 50,
+        		"long":0,
+        		"lat":0,
+        		"caption":"Das Schild am Eingang des fiktiven Gerichts befand sich am heutigen Rathaus."
+        	}
+        ]
+      }
+    ],
+    "thumbnail": "/vi-lab/img/placeholder.png",
+    "toc": [
+      {
+        "label": "Titelsequenz",
+        "number": "1",
+        "start": "0",
+        "_comment": "00:00:00:00",
+        "date": "undefined"
+      },
+      {
+        "label": "Entstehungsgeschichte",
+        "number": "2",
+        "start": "32",
+        "_comment": "00:00:32:06",
+        "date": "undefined"
+      },
+      {
+        "label": "Jazzband",
+        "number": "3",
+        "start": "82",
+        "_comment": "00:01:22:16",
+        "date": "undefined",
+        "note":"animated"
+      },
+      {
+        "label": "Terrasse",
+        "number": "4",
+        "start": "87",
+        "_comment": "00:01:27:16",
+        "date": "undefined",
+        "note":"animated"
+      },
+      {
+        "label": "Kaffeehaus",
+        "number": "5",
+        "start": "101",
+        "_comment": "00:01:41:12",
+        "date": "undefined",
+        "note":"animated"
+      },
+      {
+        "label": "Freizeit",
+        "number": "6",
+        "start": "107",
+        "_comment": "00:01:47:08",
+        "date": "undefined"
+      },
+      {
+        "label": "Sport",
+        "number": "7",
+        "start": "185",
+        "_comment": "00:03:05:11",
+        "date": "undefined"
+      },
+      {
+        "label": "Theater",
+        "number": "8",
+        "start": "215",
+        "_comment": "00:03:35:18",
+        "date": "undefined",
+        "note":"animated"
+      },
+      {
+        "label": "Beginnender Werktag",
+        "number": "9",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Selbstverwaltung",
+        "number": "10",
+        "start": "221",
+        "_comment": "00:03:41:18",
+        "date": "undefined"
+      },
+      {
+        "label": "Gericht",
+        "number": "11",
+        "start": "340",
+        "_comment": "00:05:40:09",
+        "date": "undefined"
+      },
+      {
+        "label": "Bank",
+        "number": "12",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Läden",
+        "number": "13",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Postamt",
+        "number": "14",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Gesundheitswesen",
+        "number": "15",
+        "start": "349",
+        "_comment": "00:05:49:11",
+        "date": "undefined"
+      },
+      {
+        "label": "Spielplatz",
+        "number": "16",
+        "start": "445",
+        "_comment": "00:07:25:12",
+        "date": "undefined"
+      },
+      {
+        "label": "Kinderoper",
+        "number": "17",
+        "start": "511",
+        "_comment": "00:08:31:20",
+        "date": "undefined"
+      },
+      {
+        "label": "Feuerwehr",
+        "number": "18",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Eisenbahner",
+        "number": "19",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Landwirtschaft",
+        "number": "20",
+        "start": "587",
+        "_comment": "00:09:47:23",
+        "date": "undefined",
+        "note":"animated"
+      },
+      {
+        "label": "Verpflegung",
+        "number": "21",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Freilichtveriete",
+        "number": "22",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Schwimmen",
+        "number": "23",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Wäscherei",
+        "number": "24",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Maschinentischler",
+        "number": "25",
+        "start": "-1",
+        "_comment": "missing",
+        "date": "undefined",
+        "note":"missing"
+      },
+      {
+        "label": "Schmiede",
+        "number": "26",
+        "start": "596",
+        "_comment": "00:09:56:21",
+        "date": "undefined"
+      },
+      {
+        "label": "Metallwerkstätten",
+        "number": "27",
+        "start": "619",
+        "_comment": "00:10:19:11",
+        "date": "undefined"
+      },
+      {
+        "label": "Töpferei",
+        "number": "28",
+        "start": "681",
+        "_comment": "00:11:21:02",
+        "date": "undefined"
+      },
+      {
+        "label": "Werkstätten",
+        "number": "29",
+        "start": "729",
+        "_comment": "00:12:09:12",
+        "date": "undefined"
+      },
+      {
+        "label": "Fußballspiel",
+        "number": "30",
+        "start": "915",
+        "_comment": "00:15:15:00",
+        "date": "undefined"
+      },
+      {
+        "label": "Zentralbad",
+        "number": "31",
+        "start": "1086",
+        "_comment": "00:18:06:04",
+        "date": "undefined"
+      },
+      {
+        "label": "Bücherei",
+        "number": "32",
+        "start": "1113",
+        "_comment": "00:18:33:20",
+        "date": "undefined"
+      },
+      {
+        "label": "Vortrag",
+        "number": "33",
+        "start": "1142",
+        "_comment": "00:19:02:04",
+        "date": "undefined"
+      },
+      {
+        "label": "Konzert",
+        "number": "34",
+        "start": "1182",
+        "_comment": "00:19:42:12",
+        "date": "undefined"
+      },
+      {
+        "label": "Schrebergärten",
+        "number": "35",
+        "start": "1304",
+        "_comment": "00:21:44:15",
+        "date": "undefined"
+      },
+      {
+        "label": "Abendfreizeit",
+        "number": "36",
+        "start": "1374",
+        "_comment": "00:22:54:20",
+        "date": "undefined"
+      },
+      {
+        "label": "Abendessen",
+        "number": "37",
+        "start": "1489",
+        "_comment": "00:24:49:19",
+        "date": "undefined"
+      },
+      {
+        "label": "Schlussmontage",
+        "number": "38",
+        "start": "-1",
+        "_comment": "00:24:16:05",
+        "date": "undefined",
+        "note":"missing"
+      }
+    ]
+  }
+]

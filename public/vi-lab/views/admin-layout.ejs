@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<title>Theresienstadt explained</title>
+<meta name='robots' content='noindex,nofollow' /> 
+
+<link rel="apple-touch-icon" href="/vi-lab/img/apple-touch-icon.png">
+<link rel="icon" href="/vi-lab/img/favicon.ico">
+
+<link rel="stylesheet" href="/vi-lab/css/bootstrap.min.css">
+<link rel="stylesheet" href="/vi-lab/css/bootstrap-switch.min.css" >
+<link rel="stylesheet" href="/vi-lab/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="/vi-lab/css/jquery-ui-1.10.3.custom.css">
+<link rel='stylesheet' href='/vi-lab/css/colorbox.css' id='colorboxx' type='text/css' media='all' />
+
+<link rel='stylesheet' href='/vi-lab/css/vi2.videoplayer.css' id='vi-two_player-css'  type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.assessment.css' id='vi-two-assessment' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.assessment-fill-in.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.assessment-writing.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.playback-speed.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.toc.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.highlight.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi2.syncMedia.css' type='text/css' media='all' />
+<link rel='stylesheet' href='/vi-lab/css/vi-lab.admin.css' id='vi-lab_cust-css' type='text/css' media='all' />
+
+</head>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="0">
+
+
+
+
+<!-- Navbar
+================================================== -->
+<header class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/home">Theresienstadt explained</a>
+        </div>
+        <nav class="navbar-collapse collapse">
+            <ul class="nav navbar-nav" >
+                <li class="">
+		    					<a class="" href="javascript:render('story', false, '#page');" class="">Entstehungsgeschichte</a>
+								</li>
+								<li class=""><!-- /videos/view/52a13d2e2aa9d35f24000777 -->
+									<a class="" href="/videos/view/52a13d2e2aa9d35f24000777" class="sr-only">Film</a>
+								</li>
+								<li class="">
+								<a class="" href="javascript:render('scenes', true, '#page');" class="sr-only">Szenen</a>
+								</li>
+								<li class="">
+								<a class="" href="javascript:render('persons', true, '#page');" class="sr-only">Personen</a>
+								</li>
+                
+		   				 	<li>
+		   				 		<a href="javascript:render('about', false, '#page');">About</a>
+		   				 	</li>
+                
+            </ul>
+          
+        </nav>
+    </div>
+</header>
+
+<!-- Container
+================================================== -->
+	<div id="page">
+		<div class="container">
+		
+		
+		
+		
+		
+			<div class="row">
+				<div class="col-md-2" >
+					<ul id="" class="nav nav-tabs nav-stacked sidenav" ></li>
+						<li><a data-toggle="collapse" data-target="#collapseExample" href="javascript:render('admin-videos', '/json/videos', true, '.admin-panel');">Videos</a>
+							<ul class="nav subnav collapse" id="collapseExample">
+								<li><a href="javascript:render('admin-videos-new','/admin/videos/new', false, '.admin-panel');">Add new</a>
+							</ul>
+						</li>
+						<li><a data-toggle="collapse" data-target="#collapseExample2" href="javascript:render('admin-users', '/json/users', true, '.admin-panel');">Users</a>
+							<ul class="nav subnav collapse" id="collapseExample2">
+								<li><a href="javascript:render('admin-users-new','/admin/users/new', false, '.admin-panel');">Add new</a>
+								<li><a href="javascript:render('admin-users-import','', false, '.admin-panel');">Import CSV</a>
+							</ul>
+						</li>
+						<li><a data-toggle="collapse" data-target="#collapseExample3" href="javascript:render('admin-groups', '/json/groups', true, '.admin-panel');">Groups</a>
+							<ul class="nav subnav collapse" id="collapseExample3">
+								<li><a href="javascript:render('admin-groups-new','', false, '.admin-panel');">Add new</a>
+								<li><a href="javascript:render('admin-groups-formation','', false, '.admin-panel');">Formation</a>
+								<li><a href="javascript:render('admin-groups-import','', false, '.admin-panel');">Import CSV</a>
+							</ul>
+						</li>
+						
+						<li><a href="javascript:render('admin-scripts', '/json/scripts', true, '.admin-panel');">Script</a></li>
+						<li><a href="javascript:render('admin-settings', true, '.admin-panel');">Settings</a></li>
+						<li><a href="javascript:render('admin-analytics', true, '.admin-panel');">Analytics</a></li>
+					</ul>	
+					
+					
+					
+				</div>
+				<div class="admin-panel">
+				<%- body %>
+				</div>
+		</div>
+	</div><!-- end row -->
+</div><!-- end container -->	
+<% include footer %>
+
+
+<!-- **********************************************-->
+<script src="/vi-lab/lib/jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/vi-lab/lib/jquery-migrate-1.2.1.min.js" type="text/javascript"></script>
+<script src="/vi-lab/lib/bootstrap.js" type="text/javascript"></script>
+<script src="/vi-lab/lib/holder.js" type="text/javascript"></script>
+<!--<script src="/vi-lab/lib/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>-->
+
+
+<script src="/vi-lab/lib/jquery.ui.core.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.widget.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.mouse.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.position.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.draggable.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.droppable.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.resizable.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.selectable.js" type="text/javascript"></script>
+<script src="/vi-lab/lib/jquery.ui.sortable.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.accordion.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.autocomplete.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.button.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.datepicker.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.dialog.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.menu.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.progressbar.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.slider.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.spinner.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.tabs.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.tooltip.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-blind.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-bounce.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-clip.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-drop.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-explode.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-fade.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-fold.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-highlight.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-pulsate.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-scale.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-shake.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-slide.js" type="text/javascript"></script> 
+<script src="/vi-lab/lib/jquery.ui.effect-transfer.js" type="text/javascript"></script> 
+
+<script type='text/javascript' src='/vi-lab/lib/jquery.tinysort.min.js'></script>
+<script type='text/javascript' src='/vi-lab/lib/jquery.colorbox-min.js'></script>
+<script type='text/javascript' src='/vi-lab/lib/moment.min.js'></script>
+<script type='text/javascript' src='/vi-lab/lib/jquery.colorbox-min.js'></script>
+<script type='text/javascript' src='/vi-lab/lib/jquery.spin.js'></script>
+<script type='text/javascript' src="/vi-lab/lib/markdown.js"></script>
+<script type='text/javascript' src="/vi-lab/lib/jquery-image-loader.js"></script>
+
+
+<script type='text/javascript' src='/vi-lab/lib/vi-two-deps.js'></script>
+<!--<script type='text/javascript' src='/vi-lab/lib/jquery-1.5.2.js'></script>-->
+
+
+
+
+
+
+<!--
+<link rel='stylesheet' id='jquery-ui-css' href='/vi-lab/css/vi-two-style.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='/vi-lab/src/vi-two.min.js'></script>
+-->
+
+<script type='text/javascript' src="/socket.io/socket.io.js"></script>
+<script type='text/javascript' src="/vi-lab/lib/require.js" data-main="/vi-lab/lib/requirejs-conf"></script>
+
+
+<script type="text/javascript"> 
+ var tt = 9;
+
+var server = '';
+
+
+/***/
+var render = function(template, path, remote, selector){ 
+		$('.main').hide(); 
+  	require(['text!../views/'+template+'.ejs', 'ejs'], function(thetemplate) {  
+  		if(remote){        
+				$.ajax({
+		      type: "get",
+		      beforeSend: function(xhr){ 
+		  				if (xhr.overrideMimeType){
+						    xhr.overrideMimeType("application/json");
+		  				}
+					},
+		      url: server + path,
+		      dataType: 'json',
+		      success: function(data){ 
+						var html = ejs.render(thetemplate, { items: data });
+						$(selector).html(html);
+					},
+					error : function(e){ console.log('ERROR at '+template+':'+JSON.stringify(e)); }		  
+				});
+			
+			}else{ 
+				var html = ejs.render(thetemplate, {items:0});
+				$(selector).html(html);
+			}	
+	}); // end require
+};	// end render
+
+$(window).load(function () {
+	//render('user-data', true, '.user-area'); 
+	//render('admin-videos', true, '#cont');
+	
+	//render('home', false, '#page-intro')
+	//render('story', false, '#page-history')
+	//render('scenes', true, '#page')
+	//render('persons', true, '#page')
+
+}); 
+
+//$('body').scrollspy({ target: '#myScrollspy' })
+
+
+
+// render markdown
+		$('.mark').each(function(i, val){
+				$(val).html(markdown.toHTML($(val).text()))
+		});
+
+</script>
+
+</body>
+</html>
+
