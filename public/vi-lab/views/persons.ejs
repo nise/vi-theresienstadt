@@ -1,30 +1,4 @@
 
-<script type="text/javascript"> 
-//
-var aAsc = [];
-function sortTable(e) { 
-	var nr = $(e.currentTarget).index(); 
-	aAsc[nr] = aAsc[nr]=='asc'?'desc':'asc';
-	$('#xtable>tbody>tr').tsort('td:eq('+nr+')[abbr]',{order:aAsc[nr]});
-}
-$('#xtable').find('thead th:last').siblings().bind('click', sortTable);
-
-//
-var show_bio = function(name, bio, row){ 
-	$('.bio-name').html(name);
-	$('.bio-text').html(bio);
-	$('#xtable>tbody').find('td').each( function(i,vl){ $(this).removeClass('highlight'); });
-	$('#xtable>tbody>tr[abbr="'+row+'"]').find('td').each( function(i,vl){ $(this).addClass('highlight'); });
-}
-
-// render markdown
-		$('.mark').each(function(i, val){
-				$(val).html(markdown.toHTML($(val).text()))
-		});
-
-</script>
-
-
 <div class="jumbotron">
 	<div class="container">
   <h2>Protagonisten</h2>
@@ -33,79 +7,91 @@ var show_bio = function(name, bio, row){
 </div> 
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-8">
-			<table id="xtable">
-			<thead>
-				<th></th>
-				<th>Nachname</th>
-				<th>Vorname</th>
-				<th>Geburtstag</th>
-				<th>Geburtsort</th>
-				<th>Todestag</th>
-				<th>Todesort</th>
-				<th>Beruf</th>
-			</thead>
-			<tbody>
+	<div id="table1"></div>
+</div>
 
-			<% if (items.length) { %>
-			<% i=0 %>	
-				<% items.forEach(function(item){ i++ %>
-					<tr class="meta" abbr="<%= i %>">
-						<td abbr="<%= i %>"><% if (item.images[0]) { %><img width="70" src="/vi-lab/img/persons/<%= item.images[0] %>" /><% } %></td> 
-						<td abbr="<%= i %>">
-							<% if (item.bio != "") { %>
-								<a href="javascript:show_bio('<%=: item.shortname | replace:/ /g,'_' %>', '<%= item.bio %>', <%= i %>);" title=""><%= item.surename %></a>
-							<% }else {%>
-								<%= item.surename %>
-							<%}%>
-							</td>
-						<td abbr="<%= i %>"><%= item.name %><a href="/persons/<%=: item.shortname | replace:/ /g,'_' %>" title=""></a></td>
-						<td abbr="<%= i %>"><%=: item.birth | replace:/00./g,'' %></td>
-						<td abbr="<%= i %>"><%= item.birth_place %></td>
-						<td abbr="<%= i %>"><%=: item.death | replace:/00./g,'' %></td>
-						<td abbr="<%= i %>"><%= item.death_place %></td>
-						<!--<td><%= item.prof_group %></td>-->
-						<td abbr="<%= i %>"><%= item.profession %></td>
-				</tr>
-				<!--<tr class="bio bio-<%=: item.shortname | replace:/ /g,'_' %>" hidden num="e<%= i %>">
-						<td class="bio markdown" colspan="9"><%= item.bio %></td>
-				</tr>
-		
-					<%= item.bio %> 
-					<% item.images.forEach( function ( image ){ %>
-						<img src="<%= image %>" />
-					<% }); %>
-				 	<a class="button" href="/persons/<%=: item.shortname | replace:/ /g,'_' %>" title="Update this person item">bearbeiten</a>
-				 	-->
-				 <% }) %>
-			<% } %>
-				
-			</tbody>
-			</table> 
-		</div>	
-		<div hidden class="col-md-4 side-panel affix-top" data-spy="affix">
-			<ul id="scene-menu" class="nav nav-tabs nav-stacked"  data-spy="affix">
-				<% items.forEach( function ( item ){ %>
-				<% j++ %>
-				<li><a href="#scene-<%= j %>"><%= item.surename %>, <%= item.name %></a></li>
-				<% }); %>
-			</ul>
-			<a class="back-to-top" href="#top">Back to top</a>
-		</div>
-	</div>	
-</div>	
-    
-    
-<script>
-$('.side-panel').affix({
-			offset: {
-				top: 200,
-				bottom:50
-			}
-		});
-		
-		$('.side-panel').on('affixed.bs.affix', function(){
-				$(this).removeAttr('style');
-		});
-</script>    
+<script src="/vi-lab/lib/bootstrap-table-all.min.js"></script>
+<script type="text/javascript"> 
+
+$(document).ready (function () { 
+	$('#table1').bootstrapTable({
+    url: '/json/persons',
+//    showColumns : true,
+//    checkboxHeader : true,
+    search: true,
+    strictSearch: true,
+    trimOnSearch:true,
+    detailView : function(index, row){ alert(row.bio); if(row.bio !== '' ){ return true; }else{ return false; } },
+    detailFormatter : function(index, row) { 
+    	return [
+					row.bio
+				].join('');
+		},
+		//onClickRow : function(row, el){ alert(row._id); },
+    /*onClickCell : function(field, value, row, el){ 
+    	if(field==='title'){ 
+    		window.location.href = "/admin/videos/files/edit/"+row._id;
+    	} 
+    },*/
+    columns: [			
+    	{ field: 'image', title: '', formatter:imageformatter, sortable : false, order: 'asc',searchable :false }, 
+		  { field: 'surename', title: 'Nachname', sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'name', title: 'Vorname', sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'birth', title: 'Geburtstag', visible:true, sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'birth_place', title: 'Geburtsort', visible:true, sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'death', title: 'Todestag', visible:true, sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'death_place', title: 'Todesort', visible:true, sortable : true, order: 'asc',searchable : true }, 
+		  { field: 'profession', title: 'Beruf', visible:true, sortable : true, order: 'asc',searchable : true } 
+
+    ]
+	});
+});
+
+
+function operateFormatter(value, row, index) {
+	return [
+		'<a class="like" href="/admin/videos/files/edit/'+row._id+'" title="Edit file meta data">',
+		'<i class="glyphicon glyphicon-pencil"></i>',
+		'</a>  ',
+		'<a class="remove" href="/admin/videos/files/instantiate/'+row._id+'" title="Create instance of file">',
+		'<i class="glyphicon glyphicon-export"></i>',
+		'</a>'
+		].join('');
+	}
+
+function dateFormatter(value, row, index) { 
+	return moment(value).fromNow();
+}
+
+function imageformatter(value, row, index) { 
+	if(row.images[0].length > 0){
+		return '<img width="70px" src="/vi-lab/img/persons/'+ row.images[0] +'" />';
+	}else{
+		return '';
+	}
+}
+
+function sourceFormatter(value, row, index) {
+	if(row.source !== undefined){ 
+		return [
+			'<a class="like" href="'+row.source+'" title="See video source">',
+			'<i class="glyphicon glyphicon-link"></i> '+row.creator,
+			'</a>  '
+			].join('');
+	}else{
+		return row.creator;
+	}	
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
