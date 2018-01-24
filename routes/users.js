@@ -18,9 +18,9 @@ var
 /*
 Import User data from csv
 **/
-exports.csvImport = function ( req, res ){
+exports.csvImport = function ( path ){
 	// load data
-	fs.readFile(__dirname+'/../data/users_basic.csv', function read(err, data) {
+	fs.readFile(__dirname+'/../'+path, function read(err, data) {
 		if(err){
 			console.log(err);
 		}

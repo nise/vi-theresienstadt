@@ -96,11 +96,12 @@ var conn = mongoose.connect( 'mongodb://localhost/terezin' , function(err, db){
 		persons.csvImport();
 		scenes.csvImport();
 		videos.csvImport(); // !!! caution
-		users.csvImport();
+		users.csvImport('data/users_basic.csv');
 		scripts.importScript();
 		groups.csvImport();
 		//groups.csvImportFromJSON();
 		//require('./routes/etherpad').generatePadGroups(); // !!!
+		
 		var ACL = require('./routes/aclrouts')(db, app, io);
 	}	
 });
