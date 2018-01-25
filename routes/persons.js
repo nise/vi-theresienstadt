@@ -29,8 +29,8 @@ exports.csvImport = function ( req, res ){
 		// destroy dataset first
 		Persons.remove({}, function(err) { console.log('collection removed') });
 		// reload it
-		csv().from.string(data, {comment: '#'} )
-			.to.array( function(data){ 
+		csv.stringify(data, function (err, data) {//{comment: '#'} )
+			//.to.array( function(data){ 
 				// define person for each line
 				for(var i = 1; i < data.length; i++){
 					new Persons({

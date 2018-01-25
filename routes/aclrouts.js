@@ -20,7 +20,7 @@ module.exports = function (db, app) {
 		persons = require('./persons')
 		;
 
-
+	console.log('routes');
 	//if (req.isAuthenticated()) { return next(); }
 	//res.redirect('/login')
 
@@ -149,13 +149,13 @@ module.exports = function (db, app) {
 	app.post('/assessment/written/:field', users.ensureAuthenticated, assess.setWrittenAssessment);
 
 	// routes related to etherpad
-	var etherpad = require('./etherpad');
+	/*var etherpad = require('./etherpad');
 
 	app.get('/collaborative-writing', users.ensureAuthenticated, etherpad.createSession)
 	app.get('/collaborative-writing2', users.ensureAuthenticated, etherpad.createSession2)
 	app.get('/json/etherpad', etherpad.getJSON)
 	app.get('/admin/etherpad', users.ensureAuthenticated, etherpad.listPadInput)
-
+*/
 	/*
 	Logging
 	**/

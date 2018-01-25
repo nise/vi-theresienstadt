@@ -35,8 +35,9 @@ exports.csvImport = function ( path ){
 			*/
 			// destroy dataset first
 			Users.remove({}, function(err) { console.log('Removed Users from DB') });
-			csv().from.string(data, {comment: '#'} )
-				.to.array( function(data){
+			csv.stringify(data, //{comment: '#'} )
+				//.to.array( 
+					function(data){
 					// define scene for each line
 					for(var i = 1; i < data.length; i++){
 						new Users({

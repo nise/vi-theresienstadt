@@ -41,8 +41,7 @@ exports.csvImport = function ( req, res ){
 	fs.readFile(__dirname+'/../data/groups.csv', function read(err, data) {
 		Groups.remove({}, function(err) { 
 			console.log('Removed Groups from DB') 
-			csv().from.string(data, {comment: '#'} )
-				.to.array( function(data){
+			csv.stringify(data, function(data){
 				// define group for each line
 				for(var i = 1; i < data.length; i++){
 					new Groups({

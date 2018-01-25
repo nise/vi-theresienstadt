@@ -9,7 +9,7 @@ var Schema   = mongoose.Schema;
  
  
 // 
-var Scenes = new Schema({
+const Scenes = new Schema({
 		title				: String,
 		number 			: Number,
 		source			: String, // Source at German Fedaral Archive

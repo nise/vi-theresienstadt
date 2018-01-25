@@ -4,7 +4,9 @@
 holgerschmiedl@yahoo.de
 
 
-# Next Steps
+## Next Steps
+- refactor frontend by using vue.js
+
 - downloadschutz für video, siehe aclroutes...
 - video zoom
 - vernünftiges CSS für video-controls
@@ -156,3 +158,91 @@ Eine Gruppe von Lernenden wird in Zweiergruppen aufgeteilt und in die Lernumgebu
 -- c) die Augen der Personen im Film eine besondere Wirkung haben. Die zeitliche Position von drei solcher Szenen wird markiert und mit eigenen Worten begründet.
 - In Phase 2 werden dem Lernenden lediglich die zeitlichen Markierungen ihres Gruppenpartners angezeigt. Sie erhalten die Aufgabe, diese in Bezug auf die Fragestellung in Phase 1 zu beschreiben
 - In Phase 3 analysisert die Lernumgebung die am häufigsten kommentierten Szenen. Jene Gruppen, die an der Diskussion dieser Szenen beteiligt waren erläutern allen Lernenden ihre Feststellungen.
+
+
+
+
+{
+		"name": "vi-theresienstadt",
+		"description": "This application is based on vi-lab as an node.js video learning environment and vi-two as an framework for interactive videos.",
+		"version": "0.5.1",
+		"private": true,
+		"dependencies": {
+				"abbrev": "^1.1.1",
+				"acl": "*",
+				"async": "*",
+				"body-parser": "*",
+				"canvas": "*",
+				"cheerio": "*",
+				"connect-flash": "*",
+				"cookie-parser": "*",
+				"cookies": "*",
+				"csv": "*",
+				"d3": "*",
+				"ejs": "*",
+				"ejs-locals": "*",
+				"express-json": "*",
+				"express-session": "*",
+				"express-validator": "*",
+				"gauss": "*",
+				"geoip-lite": "*",
+				"hooks": "*",
+				"http-agent": "*",
+				"identicon": "*",
+				"jquery": "*",
+				"jsdom": "*",
+				"method-override": "*",
+				"mongodb": "*",
+				"mongoose": "*",
+				"mpath": "0.2.1",
+				"mpromise": "0.5.1",
+				"mquery": "0.6.0",
+				"ms": "0.6.2",
+				"muri": "0.3.1",
+				"nan": "0.6.0",
+				"node": "*",
+				"node-csv": "*",
+				"node-fs": "*",
+				"node-schedule": "*",
+				"nopt": "^4.0.1",
+				"npm": "*",
+				"osenv": "^0.1.4",
+				"passport": "*",
+				"passport-local": "*",
+				"password-hash": "*",
+				"path": "*",
+				"redis": "0.8.6",
+				"regexp-clone": "0.0.1",
+				"request": "2.27.0",
+				"share": "0.6.3",
+				"sliced": "0.0.5",
+				"socket.io": "*",
+				"socket.io-client": "*",
+				"xml2js": "*",
+				"xmldom": "*"
+		},
+		"engines": {
+				"node": "0.8.4",
+				"npm": "1.1.49"
+		},
+		"scripts": {
+				"start": "node server.js"
+		},
+		"main": "server.js",
+		"devDependencies": {},
+		"repository": {
+				"type": "git",
+				"url": "https://github.com/nise/vi-theresienstadt.git"
+		},
+		"keywords": [
+				"interactive video",
+				"video",
+				"hypervideo",
+				"video learning environment"
+		],
+		"author": "niels seidel",
+		"license": "MIT license",
+		"bugs": {
+				"url": "https://github.com/nise/vi-theresienstadt/issues"
+		}
+}

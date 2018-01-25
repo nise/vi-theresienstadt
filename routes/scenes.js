@@ -37,8 +37,7 @@ exports.csvImport = function ( req, res ){
 			
 			// destroy dataset first
 			Scenes.remove({}, function(err) { console.log('collection removed') });
-			csv().from.string(data, {comment: '#'} )
-				.to.array( function(data){
+			csv.stringify(data, function(data){
 					// define scene for each line
 					for(var i = 1; i < data.length; i++){
 							
